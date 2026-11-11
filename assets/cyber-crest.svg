@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Cyber Samurai HUD Crest -->
+  <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="#00F0FF" stroke-width="4"/>
+  <polygon points="50,22 80,36 80,64 50,78 20,64 20,36" fill="rgba(0,240,255,0.15)" stroke="#FCEE0A" stroke-width="3"/>
+  <circle cx="50" cy="50" r="10" fill="#FF003C"/>
+</svg>
+

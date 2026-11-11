@@ -1,0 +1,16 @@
+# Dependencies & agent skills
+.agents/
+skills-lock.json
+.taste-skill/
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Private Product Master Files (NEVER COMMIT TO PUBLIC REPO)
+product/
+/product/
+

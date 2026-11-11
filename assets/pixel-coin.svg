@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- 8-Bit Pixelated Coin -->
+  <rect x="30" y="10" width="40" height="10" fill="#000000"/>
+  <rect x="30" y="80" width="40" height="10" fill="#000000"/>
+  <rect x="10" y="30" width="10" height="40" fill="#000000"/>
+  <rect x="80" y="30" width="10" height="40" fill="#000000"/>
+  <rect x="20" y="20" width="10" height="10" fill="#000000"/>
+  <rect x="70" y="20" width="10" height="10" fill="#000000"/>
+  <rect x="20" y="70" width="10" height="10" fill="#000000"/>
+  <rect x="70" y="70" width="10" height="10" fill="#000000"/>
+  <!-- Gold fill -->
+  <rect x="30" y="20" width="40" height="60" fill="#FFCC00"/>
+  <rect x="20" y="30" width="60" height="40" fill="#FFCC00"/>
+  <!-- Highlight -->
+  <rect x="30" y="30" width="10" height="40" fill="#FFF275"/>
+</svg>
+
