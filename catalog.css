@@ -2955,3 +2955,541 @@ body {
     transform: scale(0.62);
   }
 }
+
+/* ==========================================================
+   12 NEW THEMES STYLES (TOTAL 22 THEMES)
+   ========================================================== */
+
+/* 11. MOBILE LEGENDS MYTHICAL GLORY */
+.mlbb-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  animation: mlbbAlertIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.mlbb-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0B0E28;
+  color: #F59E0B;
+  border: 1.5px solid #F59E0B;
+  padding: 4px 14px 4px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+}
+.mlbb-badge-text { font-family: 'Cinzel', serif; font-size: 13px; font-weight: 700; letter-spacing: 0.8px; }
+.mlbb-alert-card {
+  position: relative;
+  background: linear-gradient(135deg, #0B0E28 0%, #171A42 100%);
+  border: 1.5px solid #F59E0B;
+  border-radius: 16px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.25);
+  overflow: hidden;
+}
+.mlbb-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; }
+.mlbb-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.mlbb-amount { font-family: 'Cinzel', serif; font-size: 26px; font-weight: 800; color: #F59E0B; }
+.mlbb-from { font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.6); }
+.mlbb-supporter { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; color: #FFFFFF; }
+.mlbb-message { font-size: 14px; color: #F8FAFC; background: rgba(0, 0, 0, 0.35); padding: 8px 14px; border-radius: 8px; border-left: 3px solid #F59E0B; }
+@keyframes mlbbAlertIn { 0% { opacity: 0; transform: translateY(-20px) scale(0.92); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+
+/* 12. BATTLE ROYALE BOOYAH AIRDROP */
+.booyah-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Geist Mono', monospace;
+  animation: booyahAlertIn 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+.booyah-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #18181B;
+  color: #FF5722;
+  border: 1.5px solid #DC2626;
+  padding: 4px 14px 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.5);
+}
+.booyah-badge-text { font-family: 'Black Ops One', cursive; font-size: 13px; letter-spacing: 1px; }
+.booyah-alert-card {
+  position: relative;
+  background: linear-gradient(135deg, #18181B 0%, #27272A 100%);
+  border: 2px solid #DC2626;
+  border-radius: 12px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(239, 68, 68, 0.3);
+  overflow: hidden;
+}
+.booyah-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; }
+.booyah-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.booyah-amount { font-family: 'Black Ops One', cursive; font-size: 26px; color: #FF5722; }
+.booyah-from { font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.6); }
+.booyah-supporter { font-family: 'Geist Mono', monospace; font-size: 18px; font-weight: 800; color: #FFFFFF; }
+.booyah-message { font-size: 13px; color: #F8FAFC; background: rgba(0, 0, 0, 0.45); padding: 8px 14px; border-radius: 6px; border-left: 3px solid #DC2626; }
+@keyframes booyahAlertIn { 0% { opacity: 0; transform: translateY(-30px); } 60% { transform: translateY(4px); } 100% { opacity: 1; transform: translateY(0); } }
+
+/* 13. GENSHIN 5-STAR STELLAR WISH */
+.genshin-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  animation: genshinAlertIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.genshin-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0A0E24;
+  color: #FACC15;
+  border: 1.5px solid rgba(250, 204, 21, 0.7);
+  padding: 4px 14px 4px 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(250, 204, 21, 0.45);
+}
+.genshin-badge-text { font-family: 'Cinzel', serif; font-size: 12px; font-weight: 800; letter-spacing: 0.6px; }
+.genshin-alert-card {
+  position: relative;
+  background: linear-gradient(135deg, #0A0E24 0%, #151D48 100%);
+  border: 1.5px solid rgba(250, 204, 21, 0.65);
+  border-radius: 18px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 35px rgba(250, 204, 21, 0.3);
+  overflow: hidden;
+}
+.genshin-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; }
+.genshin-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.genshin-amount { font-family: 'Cinzel', serif; font-size: 26px; font-weight: 800; color: #FACC15; }
+.genshin-from { font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.6); }
+.genshin-supporter { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; color: #FFFFFF; }
+.genshin-message { font-size: 14px; color: #F8FAFC; background: rgba(0, 0, 0, 0.35); padding: 8px 14px; border-radius: 8px; border-left: 3px solid #FACC15; }
+@keyframes genshinAlertIn { 0% { opacity: 0; transform: scale(0.85); filter: blur(6px); } 100% { opacity: 1; transform: scale(1); filter: blur(0); } }
+
+/* 14. EA FC ULTIMATE TROPHY */
+.fut-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Montserrat', sans-serif;
+  animation: futAlertIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.fut-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #090C10;
+  color: #EAB308;
+  border: 1.5px solid #EAB308;
+  padding: 4px 14px 4px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(234, 179, 8, 0.4);
+}
+.fut-badge-text { font-family: 'Teko', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; }
+.fut-alert-card {
+  position: relative;
+  background: linear-gradient(135deg, #090C10 0%, #121A24 100%);
+  border: 1.5px solid #EAB308;
+  border-radius: 14px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(234, 179, 8, 0.25);
+  overflow: hidden;
+}
+.fut-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; }
+.fut-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.fut-amount { font-family: 'Teko', sans-serif; font-size: 32px; font-weight: 700; color: #EAB308; line-height: 1; }
+.fut-from { font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.6); }
+.fut-supporter { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 800; color: #FFFFFF; }
+.fut-message { font-size: 13px; color: #F8FAFC; background: rgba(0, 0, 0, 0.4); padding: 8px 14px; border-radius: 8px; border-left: 3px solid #10B981; }
+@keyframes futAlertIn { 0% { opacity: 0; transform: rotateY(70deg) scale(0.9); } 100% { opacity: 1; transform: rotateY(0) scale(1); } }
+
+/* 15. JUJUTSU KAISEN CURSED DOMAIN */
+.jjk-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  animation: jjkAlertIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.jjk-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #040406;
+  color: #7C3AED;
+  border: 1.5px solid #E11D48;
+  padding: 4px 14px 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.6);
+}
+.jjk-badge-text { font-family: 'Cinzel', serif; font-size: 12px; font-weight: 900; letter-spacing: 0.8px; }
+.jjk-alert-card {
+  position: relative;
+  background: linear-gradient(135deg, #040406 0%, #110A1C 100%);
+  border: 1.5px solid #7C3AED;
+  border-radius: 12px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9), 0 0 35px rgba(124, 58, 237, 0.4);
+  overflow: hidden;
+}
+.jjk-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; }
+.jjk-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.jjk-amount { font-family: 'Cinzel', serif; font-size: 26px; font-weight: 900; color: #E11D48; text-shadow: 0 0 10px rgba(225, 29, 72, 0.6); }
+.jjk-from { font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.6); }
+.jjk-supporter { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; color: #FFFFFF; }
+.jjk-message { font-size: 14px; color: #F8FAFC; background: rgba(0, 0, 0, 0.5); padding: 8px 14px; border-radius: 6px; border-left: 3px solid #7C3AED; }
+@keyframes jjkAlertIn { 0% { opacity: 0; transform: scale(1.15); filter: blur(8px); } 100% { opacity: 1; transform: scale(1); filter: blur(0); } }
+
+/* 16. DEMON SLAYER HINOKAMI FLAME */
+.demonslayer-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  animation: demonslayerAlertIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.demonslayer-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #101014;
+  color: #EA580C;
+  border: 1.5px solid #EA580C;
+  padding: 4px 14px 4px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(234, 88, 12, 0.5);
+}
+.demonslayer-badge-text { font-family: 'Cinzel', serif; font-size: 12px; font-weight: 800; letter-spacing: 0.8px; }
+.demonslayer-alert-card {
+  position: relative;
+  background: linear-gradient(135deg, #101014 0%, #241410 100%);
+  border: 1.5px solid #EA580C;
+  border-radius: 14px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 30px rgba(234, 88, 12, 0.3);
+  overflow: hidden;
+}
+.demonslayer-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; }
+.demonslayer-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.demonslayer-amount { font-family: 'Cinzel', serif; font-size: 26px; font-weight: 800; color: #EA580C; }
+.demonslayer-from { font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.6); }
+.demonslayer-supporter { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; color: #FFFFFF; }
+.demonslayer-message { font-size: 14px; color: #F8FAFC; background: rgba(0, 0, 0, 0.4); padding: 8px 14px; border-radius: 8px; border-left: 3px solid #EA580C; }
+@keyframes demonslayerAlertIn { 0% { opacity: 0; transform: translateX(-30px); } 100% { opacity: 1; transform: translateX(0); } }
+
+/* 17. COZY LOFI CAFE & CAT */
+.lofi-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  animation: lofiAlertIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.lofi-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #251814;
+  color: #D97706;
+  border: 1.5px solid #D97706;
+  padding: 4px 14px 4px 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.35);
+}
+.lofi-badge-text { font-family: 'Comfortaa', cursive; font-size: 12px; font-weight: 700; }
+.lofi-alert-card {
+  position: relative;
+  background: linear-gradient(135deg, #251814 0%, #38241D 100%);
+  border: 1.5px solid #D97706;
+  border-radius: 20px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 20px rgba(217, 119, 6, 0.2);
+  overflow: hidden;
+}
+.lofi-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; }
+.lofi-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.lofi-amount { font-family: 'Comfortaa', cursive; font-size: 24px; font-weight: 700; color: #F59E0B; }
+.lofi-from { font-size: 13px; font-weight: 600; color: #FED7AA; }
+.lofi-supporter { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; color: #FFF7ED; }
+.lofi-message { font-size: 14px; color: #FFF7ED; background: rgba(0, 0, 0, 0.3); padding: 8px 14px; border-radius: 10px; border-left: 3px solid #D97706; }
+@keyframes lofiAlertIn { 0% { opacity: 0; transform: translateY(15px); } 100% { opacity: 1; transform: translateY(0); } }
+
+/* 18. GOTHIC VAMPIRE BLOOD MOON */
+.gothic-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Montserrat', sans-serif;
+  animation: gothicAlertIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.gothic-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #090508;
+  color: #E11D48;
+  border: 1.5px solid #881337;
+  padding: 4px 14px 4px 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(136, 19, 55, 0.6);
+}
+.gothic-badge-text { font-family: 'Cinzel', serif; font-size: 12px; font-weight: 800; letter-spacing: 1px; }
+.gothic-alert-card {
+  position: relative;
+  background: linear-gradient(135deg, #090508 0%, #1A0912 100%);
+  border: 1.5px solid #881337;
+  border-radius: 8px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9), 0 0 30px rgba(225, 29, 72, 0.3);
+  overflow: hidden;
+}
+.gothic-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; }
+.gothic-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.gothic-amount { font-family: 'Cinzel', serif; font-size: 26px; font-weight: 800; color: #E11D48; }
+.gothic-from { font-size: 13px; font-weight: 600; color: #FDA4AF; }
+.gothic-supporter { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 800; color: #FFFFFF; }
+.gothic-message { font-size: 13px; color: #F8FAFC; background: rgba(0, 0, 0, 0.5); padding: 8px 14px; border-radius: 6px; border-left: 3px solid #881337; }
+@keyframes gothicAlertIn { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
+
+/* 19. Y2K AESTHETIC & WIN98 */
+.y2k-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Geist Mono', monospace;
+  animation: y2kAlertIn 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+.y2k-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #000080;
+  color: #FFFFFF;
+  border: 1.5px solid #C0C0C0;
+  padding: 4px 14px 4px 10px;
+  box-shadow: 2px 2px 0px #000;
+}
+.y2k-badge-text { font-family: 'Press Start 2P', monospace; font-size: 10px; }
+.y2k-alert-card {
+  position: relative;
+  background: #C0C0C0;
+  border: 3px outset #FFFFFF;
+  box-shadow: 4px 4px 0px #000000;
+  padding: 22px 26px 18px;
+  overflow: hidden;
+}
+.y2k-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; color: #000; }
+.y2k-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.y2k-amount { font-family: 'Press Start 2P', monospace; font-size: 18px; color: #000080; }
+.y2k-from { font-size: 12px; font-weight: 700; color: #475569; }
+.y2k-supporter { font-family: 'Geist Mono', monospace; font-size: 16px; font-weight: 800; color: #000; }
+.y2k-message { font-size: 13px; font-weight: 600; color: #000; background: #FFFFFF; border: 2px inset #808080; padding: 8px 12px; }
+@keyframes y2kAlertIn { 0% { opacity: 0; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1); } }
+
+/* 20. INDONESIAN HOROR MALAM JUMAT */
+.horror-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  animation: horrorAlertIn 0.8s ease-in-out forwards;
+}
+.horror-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #070B0E;
+  color: #D97706;
+  border: 1.5px solid #134E4A;
+  padding: 4px 14px 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(19, 78, 74, 0.6);
+}
+.horror-badge-text { font-family: 'Cinzel', serif; font-size: 12px; font-weight: 800; letter-spacing: 0.8px; }
+.horror-alert-card {
+  position: relative;
+  background: linear-gradient(135deg, #070B0E 0%, #111A20 100%);
+  border: 1.5px solid #134E4A;
+  border-radius: 10px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9), 0 0 30px rgba(19, 78, 74, 0.35);
+  overflow: hidden;
+}
+.horror-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; }
+.horror-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.horror-amount { font-family: 'Cinzel', serif; font-size: 26px; font-weight: 800; color: #D97706; }
+.horror-from { font-size: 13px; font-weight: 600; color: #94A3B8; }
+.horror-supporter { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; color: #E2E8F0; }
+.horror-message { font-size: 14px; color: #CBD5E1; background: rgba(0, 0, 0, 0.55); padding: 8px 14px; border-radius: 6px; border-left: 3px solid #134E4A; }
+@keyframes horrorAlertIn { 0% { opacity: 0; filter: blur(10px); } 100% { opacity: 1; filter: blur(0); } }
+
+/* 21. SULTAN JACKPOT GOLDEN VEGAS */
+.jackpot-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  animation: jackpotAlertIn 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+.jackpot-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #080711;
+  color: #F59E0B;
+  border: 1.5px solid #F59E0B;
+  padding: 4px 14px 4px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.6);
+}
+.jackpot-badge-text { font-family: 'Righteous', cursive; font-size: 13px; letter-spacing: 0.8px; }
+.jackpot-alert-card {
+  position: relative;
+  background: linear-gradient(135deg, #080711 0%, #1A132B 100%);
+  border: 2px solid #F59E0B;
+  border-radius: 16px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 35px rgba(245, 158, 11, 0.35);
+  overflow: hidden;
+}
+.jackpot-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; }
+.jackpot-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.jackpot-amount { font-family: 'Righteous', cursive; font-size: 28px; color: #F59E0B; }
+.jackpot-from { font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.6); }
+.jackpot-supporter { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; color: #FFFFFF; }
+.jackpot-message { font-size: 14px; color: #F8FAFC; background: rgba(0, 0, 0, 0.4); padding: 8px 14px; border-radius: 8px; border-left: 3px solid #F59E0B; }
+@keyframes jackpotAlertIn { 0% { opacity: 0; transform: scale(0.7) translateY(-20px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+
+/* 22. RACING SPEED DRIFT TRACK */
+.drift-alert-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  animation: driftAlertIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.drift-badge {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0B0F19;
+  color: #22C55E;
+  border: 1.5px solid #22C55E;
+  padding: 4px 14px 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4);
+}
+.drift-badge-text { font-family: 'Orbitron', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.8px; }
+.drift-alert-card {
+  position: relative;
+  background: linear-gradient(135deg, #0B0F19 0%, #161F33 100%);
+  border: 1.5px solid #22C55E;
+  border-radius: 12px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(34, 197, 94, 0.25);
+  overflow: hidden;
+}
+.drift-content { position: relative; z-index: 5; display: flex; flex-direction: column; gap: 8px; }
+.drift-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.drift-amount { font-family: 'Orbitron', sans-serif; font-size: 26px; font-weight: 800; color: #22C55E; }
+.drift-from { font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.6); }
+.drift-supporter { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; color: #FFFFFF; }
+.drift-message { font-size: 14px; color: #F8FAFC; background: rgba(0, 0, 0, 0.4); padding: 8px 14px; border-radius: 6px; border-left: 3px solid #EF4444; }
+@keyframes driftAlertIn { 0% { opacity: 0; transform: translateX(50px) skewX(-10deg); } 100% { opacity: 1; transform: translateX(0) skewX(0); } }
+
+/* Universal SVG Badge Icon & Watermark for 12 New Themes */
+.theme-badge-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.theme-watermark {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 130px;
+  height: 130px;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 1;
+}

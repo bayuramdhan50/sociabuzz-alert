@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80" width="100" height="80">
+  <defs>
+    <linearGradient id="jjkViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#3B0764"/>
+    </linearGradient>
+  </defs>
+  <!-- Sukuna Markings / Cursed Eyes -->
+  <path d="M 50,10 C 65,10 78,25 78,40 C 78,60 50,75 50,75 C 50,75 22,60 22,40 C 22,25 35,10 50,10 Z" fill="none" stroke="url(#jjkViolet)" stroke-width="4"/>
+  <!-- Inner Black Flash Pupil -->
+  <circle cx="50" cy="40" r="14" fill="#040406" stroke="#E11D48" stroke-width="3"/>
+  <circle cx="50" cy="40" r="6" fill="#E11D48"/>
+  <!-- Lightning Sparks -->
+  <path d="M 28,25 L 35,32 L 30,38" fill="none" stroke="#E11D48" stroke-width="2"/>
+  <path d="M 72,25 L 65,32 L 70,38" fill="none" stroke="#E11D48" stroke-width="2"/>
+</svg>

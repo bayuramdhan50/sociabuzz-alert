@@ -6,9 +6,9 @@ Dilengkapi dengan **Website Katalog & Interactive Live Simulator** (`index.html`
 
 ---
 
-## 🎨 Daftar 10 Tema Custom Alert Siap Pakai
+## 🎨 Daftar 22 Tema Custom Alert Siap Pakai
 
-Tersedia 10 desain eksklusif dengan animasi tematik khas, visual unik, dan tipografi berkarakter:
+Tersedia 22 desain eksklusif dengan animasi tematik khas, visual unik, dan tipografi berkarakter:
 
 | No | Nama Tema | Karakter / Bentuk Kartu | Palet Warna Utama | Tipografi |
 |---|---|---|---|---|
@@ -22,6 +22,18 @@ Tersedia 10 desain eksklusif dengan animasi tematik khas, visual unik, dan tipog
 | 8 | **Royal Luxury Gold** | Double Gold Geometric Frame, Mahkota Kerajaan, Shimmer | Imperial Gold (`#D4AF37`), Obsidian Velvet (`#0E0E12`) | `Cinzel` & `Plus Jakarta Sans` |
 | 9 | **Minimalist Modern Glass** | Frosted Glass Bar 16px, Status Dot Aktif, Tipografi Bersih | Electric Emerald (`#00F59B`), Slate Glass (`#0F172A`) | `Plus Jakarta Sans` |
 | 10 | **Team Liquid Official Edition** | Rounded 20px, Tilted Badge, Watermark Kuda Liquid | Foundation Blue (`#001538`), EBB Cyan (`#3BB0D4`) | `DM Sans` & `Plus Jakarta Sans` |
+| 11 | **Mobile Legends Mythical Glory** | Bingkai Sayap Mythic Emas, Kristal Ungu Bersinar | Glory Gold (`#F59E0B`), Mystic Violet (`#8B5CF6`) | `Cinzel` & `Plus Jakarta Sans` |
+| 12 | **Battle Royale BOOYAH Airdrop** | Kotak Peti Airdrop Militer, Garis Hazard Crimson | Safety Orange (`#FF5722`), Airdrop Crimson (`#DC2626`) | `Black Ops One` & `Geist Mono` |
+| 13 | **Genshin 5-Star Stellar Wish** | Bintang Emas 5★ Kosmik, Border Rasi Bintang | Wish Gold (`#FACC15`), Astral Dark (`#0A0E24`) | `Cinzel` & `Plus Jakarta Sans` |
+| 14 | **EA FC Ultimate Trophy** | Kartu Pemain FUT OVR 99 Emas, Nuansa Stadion | Trophy Gold (`#EAB308`), Pitch Green (`#10B981`) | `Teko` & `Montserrat` |
+| 15 | **Jujutsu Kaisen Cursed Domain** | Void Hitam Pekat, Aura Kutukan Ungu, Sukuna Crimson | Sukuna Crimson (`#E11D48`), Cursed Violet (`#7C3AED`) | `Cinzel` & `Plus Jakarta Sans` |
+| 16 | **Demon Slayer Hinokami Flame** | Tebasan Api Hinokami Kagura, Aksen Haori Tanjiro | Flame Orange (`#EA580C`), Sun Gold (`#FDE047`) | `Cinzel` & `Plus Jakarta Sans` |
+| 17 | **Cozy Lofi Cafe & Cat** | Cangkir Kopi Espresso Hangat, Uap Lembut, Siluet Kucing | Honey Caramel (`#D97706`), Warm Espresso (`#251814`) | `Comfortaa` & `Plus Jakarta Sans` |
+| 18 | **Gothic Vampire Blood Moon** | Katedral Gotik, Mawar Hitam Berduri, Lilin Merah Darah | Blood Crimson (`#881337`), Midnight Velvet (`#090508`) | `Cinzel` & `Montserrat` |
+| 19 | **Y2K Aesthetic & Win98 Nostalgia** | Jendela Dialog Pop-Up Retro 90-an, Tombol OS Beveled | Win98 Gray (`#C0C0C0`), Cyber Magenta (`#FF007F`) | `Press Start 2P` & `Geist Mono` |
+| 20 | **Indonesian Horor Malam Jumat** | Papan Kayu Tua Keramat, Asap Kabut, Api Lentera Mistik | Torchlight Amber (`#D97706`), Grave Dark (`#070B0E`) | `Cinzel` & `Plus Jakarta Sans` |
+| 21 | **Sultan Jackpot Golden Vegas** | Mesin Slot Vegas 777 Emas, Taburan Koin Berkilau | Jackpot Gold (`#F59E0B`), Casino Velvet (`#080711`) | `Righteous` & `Plus Jakarta Sans` |
+| 22 | **Racing Speed Drift Cyber Track** | Speedometer Digital, Indikator Tachometer RPM Redline | Nitro Green (`#22C55E`), Tachometer Red (`#EF4444`) | `Orbitron` & `Plus Jakarta Sans` |
 
 ---
 
