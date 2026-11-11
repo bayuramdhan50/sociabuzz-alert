@@ -110,6 +110,15 @@ sociabuzz-alert/
 
 ---
 
+## 💰 Daftar Harga Resmi
+
+| Paket Layanan | Harga | Yang Didapatkan |
+|---|---|---|
+| **Katalog Siap Pasang** | **Rp 25.000** / tema | File `sociabuzz-html.html`, `sociabuzz-css.css`, `preview.html`, panduan setup instan ke OBS & TikTok Live Studio. Bebas pilih dari 22 tema. |
+| **Custom Request Eksklusif** | **Rp 50.000** / tema | Desain dari nol sesuai persona streamer Anda: request logo, maskot, palet warna, tipografi, dan sound effect unik. |
+
+---
+
 ## 📞 Informasi Kontak & Pemesanan Custom Alert
 
 Untuk pembelian paket tema di atas atau pemesanan kustomisasi eksklusif (logo kustom, maskot streamer, palet warna khusus, dan sound effect unik):
