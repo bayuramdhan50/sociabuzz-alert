@@ -1,162 +1,107 @@
-# ⚡ StreamAlert Studio - Koleksi Custom Donation Alert SociaBuzz & OBS
+# ⚡ StreamAlert Studio - Showcase Custom Alert SociaBuzz, OBS & TikTok Live Studio
 
-Koleksi lengkap asset kustomisasi alert donasi (overlay) siap pakai untuk **SociaBuzz** dan **OBS Studio / Streamlabs**. Murni dibangun menggunakan **HTML & CSS self-contained** yang ringan, berjalan mulus 60 FPS tanpa lag, dan tidak bergantung pada plugin eksternal.
+Koleksi lengkap aset kustomisasi donasi alert (overlay) 60 FPS untuk **SociaBuzz**, **OBS Studio**, dan **TikTok Live Studio**. Dibangun murni menggunakan **HTML5 & CSS3 modern** yang sangat ringan, responsif, tanpa dependensi berat, dan tidak membebani performa PC saat streaming game berat.
 
-Dilengkapi dengan **Website Katalog Statis Showcase** (`index.html`) yang siap di-hosting gratis langsung menggunakan **GitHub Pages (`github.io`)**.
+Dilengkapi dengan **Website Katalog & Interactive Live Simulator** (`index.html`) untuk menguji coba animasi kemunculan alert, kustomisasi nominal, nama donatur, serta pesan dukungan secara langsung.
 
 ---
 
 ## 🎨 Daftar 10 Tema Custom Alert Siap Pakai
 
-Setiap tema dikemas rapi dalam foldernya masing-masing dengan berkas kode SociaBuzz, simulator interaktif offline, dan dokumentasi panduan:
+Tersedia 10 desain eksklusif dengan animasi tematik khas, visual unik, dan tipografi berkarakter:
 
-| No | Folder Tema | Nama Tema | Karakter / Bentuk Kartu | Palet Warna Utama | Tipografi (Google Fonts) |
-|---|---|---|---|---|---|
-| 1 | [`Tema_Naruto_Shinobi/`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/Tema_Naruto_Shinobi) | **Naruto Shinobi Konoha** | Gulungan Ninja, Pusaran Uzumaki, Aksen Chakra | Chakra Orange (`#FF7300`), Rasengan Cyan (`#00D2FF`) | `Bangers` & `Plus Jakarta Sans` |
-| 2 | [`Tema_Batman_DarkKnight/`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/Tema_Batman_DarkKnight) | **Batman The Dark Knight** | Batwing Beveled Cuts, Sorot Bat-Signal | Gotham Black (`#08090C`), Bat-Yellow (`#FFE600`) | `Teko` & `Montserrat` |
-| 3 | [`Tema_OnePiece_Pirate/`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/Tema_OnePiece_Pirate) | **One Piece Pirate Bounty** | Poster Wanted Perkamen, Lambang Berry ฿ | Vintage Parchment (`#FBF2DC`), Crimson (`#C92A2A`) | `Rye` & `Plus Jakarta Sans` |
-| 4 | [`Tema_Valorant_Tactical/`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/Tema_Valorant_Tactical) | **Valorant Tactical Agent** | VCT Polygon Chamfer, Crosshair HUD | Valorant Red (`#FF4655`), Charcoal (`#0F1923`) | `Oswald` & `Share Tech Mono` |
-| 5 | [`Tema_Cyberpunk_Neon/`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/Tema_Cyberpunk_Neon) | **Cyberpunk Neon Mecha** | Chamfered Polygon Cut, Laser Scanline Sweep | Cyber Yellow (`#FCEE0A`), Cyan Laser (`#00F0FF`) | `Orbitron` & `Rajdhani` |
-| 6 | [`Tema_Sakura_Kawaii/`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/Tema_Sakura_Kawaii) | **Sakura Pastel Kawaii** | Soft Rounded Pill 26px, Kelopak Bunga Berputar | Blossom Pink (`#FF6B8B`), Strawberry (`#FF3366`) | `Quicksand` & `Itim` |
-| 7 | [`Tema_Pixel_Retro/`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/Tema_Pixel_Retro) | **Pixel Retro 8-Bit Arcade** | Stepped Pixel Box Shadow, CRT Scanlines | Coin Gold (`#FFCC00`), Retro Cyan (`#00F5D4`) | `Press Start 2P` & `VT323` |
-| 8 | [`Tema_Royal_Luxury/`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/Tema_Royal_Luxury) | **Royal Luxury Gold** | Double Gold Geometric Frame, Shimmer Sweep | Imperial Gold (`#D4AF37`), Obsidian (`#0E0E12`) | `Cinzel` & `Montserrat` |
-| 9 | [`Tema_Minimalist_Modern/`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/Tema_Minimalist_Modern) | **Minimalist Modern Glass** | Frosted Glass Bar 16px, Dot Hijau Aktif | Electric Emerald (`#00F59B`), Slate (`#0F172A`) | `Plus Jakarta Sans` |
-| 10 | [`Pribadi/`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/Pribadi) | **Team Liquid Official Edition** | Rounded Card 20px, Watermark Kuda Liquid | Foundation Blue (`#001538`), Cyan (`#3BB0D4`) | `DM Sans` & `Caveat` |
+| No | Nama Tema | Karakter / Bentuk Kartu | Palet Warna Utama | Tipografi |
+|---|---|---|---|---|
+| 1 | **Naruto Shinobi Konoha** | Gulungan Ninja, Segel Pusaran, Aksen Chakra Jutsu | Chakra Orange (`#FF7300`), Rasengan Cyan (`#00D2FF`) | `Bangers` & `Plus Jakarta Sans` |
+| 2 | **Batman The Dark Knight** | Batwing Beveled Cuts, Sorot Bat-Signal Gotham | Gotham Black (`#08090C`), Bat-Yellow (`#FFE600`) | `Teko` & `Montserrat` |
+| 3 | **One Piece Pirate Bounty** | Poster Wanted Perkamen, Stempel Crimson, Mata Uang Berry ฿ | Vintage Parchment (`#FBF2DC`), Crimson (`#C92A2A`) | `Rye` & `Plus Jakarta Sans` |
+| 4 | **Valorant Tactical Agent** | VCT Polygon Chamfer, Crosshair HUD, Status Defused | Valorant Red (`#FF4655`), Dark Charcoal (`#0F1923`) | `Oswald` & `Share Tech Mono` |
+| 5 | **Cyberpunk Neon Mecha** | Chamfered Polygon Cut, Corner Brackets, Laser Scanline | Cyber Yellow (`#FCEE0A`), Cyan Laser (`#00F0FF`) | `Orbitron` & `Geist Mono` |
+| 6 | **Sakura Pastel Kawaii** | Soft Rounded Pill 26px, Kelopak Bunga Berputar, Sparkle | Blossom Pink (`#FF6B8B`), Strawberry (`#FF3366`) | `Quicksand` & `Plus Jakarta Sans` |
+| 7 | **Pixel Retro 8-Bit Arcade** | Stepped Pixel Art Shadow, CRT Scanlines, Coin 1-UP | Coin Gold (`#FFCC00`), Retro Cyan (`#00F5D4`) | `Press Start 2P` & `Geist Mono` |
+| 8 | **Royal Luxury Gold** | Double Gold Geometric Frame, Mahkota Kerajaan, Shimmer | Imperial Gold (`#D4AF37`), Obsidian Velvet (`#0E0E12`) | `Cinzel` & `Plus Jakarta Sans` |
+| 9 | **Minimalist Modern Glass** | Frosted Glass Bar 16px, Status Dot Aktif, Tipografi Bersih | Electric Emerald (`#00F59B`), Slate Glass (`#0F172A`) | `Plus Jakarta Sans` |
+| 10 | **Team Liquid Official Edition** | Rounded 20px, Tilted Badge, Watermark Kuda Liquid | Foundation Blue (`#001538`), EBB Cyan (`#3BB0D4`) | `DM Sans` & `Plus Jakarta Sans` |
 
 ---
 
-## 📁 Struktur Direktori Proyek
+## 🌟 Fitur Utama
+
+- **⚡ 60 FPS Ultra-Smooth Animation**: Animasi berbasis CSS hardware-accelerated (`transform` & `opacity`), dioptimalkan agar tidak memicu drop frame pada OBS maupun TikTok Live Studio.
+- **🖥️ Simulator Interaktif Mandiri**: Pengunjung dapat menguji tampilan alert langsung di website tanpa perlu memasang file apa pun ke software streaming terlebih dahulu.
+- **🎯 100% Kompatibel**: Berjalan mulus di Browser Source OBS Studio, Streamlabs Desktop, Prism Live Studio, dan TikTok Live Studio.
+- **📦 Kode Bersih & Mandiri**: Setiap tema paket jualan terstruktur rapi dengan berkas `sociabuzz-html.html` dan `sociabuzz-css.css` yang siap langsung disalin ke dashboard SociaBuzz.
+
+---
+
+## 📁 Struktur Berkas Repositori
 
 ```
 sociabuzz-alert/
-├── index.html                   # Website Katalog Showcase (Entrypoint GitHub Pages)
-├── catalog.css                  # Stylesheet modern dark theme & responsive grid
-├── README.md                    # Dokumentasi lengkap proyek & panduan hosting
-│
-├── Tema_Naruto_Shinobi/         # [1] Tema Naruto
-│   ├── sociabuzz-html.html      # Kode HTML siap salin ke SociaBuzz
-│   ├── sociabuzz-css.css       # Kode CSS siap salin ke SociaBuzz
-│   ├── preview.html            # Simulator interaktif browser
-│   └── README.md
-│
-├── Tema_Batman_DarkKnight/      # [2] Tema Batman
-│   ├── sociabuzz-html.html
-│   ├── sociabuzz-css.css
-│   ├── preview.html
-│   └── README.md
-│
-├── Tema_OnePiece_Pirate/        # [3] Tema One Piece
-│   ├── sociabuzz-html.html
-│   ├── sociabuzz-css.css
-│   ├── preview.html
-│   └── README.md
-│
-├── Tema_Valorant_Tactical/      # [4] Tema Valorant
-│   ├── sociabuzz-html.html
-│   ├── sociabuzz-css.css
-│   ├── preview.html
-│   └── README.md
-│
-├── Tema_Cyberpunk_Neon/         # [5] Tema Cyberpunk
-│   ├── sociabuzz-html.html
-│   ├── sociabuzz-css.css
-│   ├── preview.html
-│   └── README.md
-│
-├── Tema_Sakura_Kawaii/          # [6] Tema Sakura Kawaii
-│   ├── sociabuzz-html.html
-│   ├── sociabuzz-css.css
-│   ├── preview.html
-│   └── README.md
-│
-├── Tema_Pixel_Retro/            # [7] Tema Pixel Retro 8-Bit
-│   ├── sociabuzz-html.html
-│   ├── sociabuzz-css.css
-│   ├── preview.html
-│   └── README.md
-│
-├── Tema_Royal_Luxury/           # [8] Tema Royal Luxury Gold
-│   ├── sociabuzz-html.html
-│   ├── sociabuzz-css.css
-│   ├── preview.html
-│   └── README.md
-│
-├── Tema_Minimalist_Modern/      # [9] Tema Minimalist Glass
-│   ├── sociabuzz-html.html
-│   ├── sociabuzz-css.css
-│   ├── preview.html
-│   └── README.md
-│
-└── Pribadi/                     # [10] Tema Pribadi Team Liquid
-    ├── sociabuzz-html.html
-    ├── sociabuzz-css.css
-    ├── preview.html
-    └── README.md
+├── index.html                   # Website Katalog Showcase & Interactive Simulator
+├── catalog.css                  # Stylesheet modern dark theme, layout grid & keyframes
+├── assets/                      # Aset SVG & ikon visual resmi tema
+│   ├── batman-symbol.svg
+│   ├── cyber-crest.svg
+│   ├── naruto-konoha.svg
+│   ├── onepiece-strawhat.svg
+│   ├── pixel-coin.svg
+│   ├── royal-crown.svg
+│   ├── sakura-flower.svg
+│   ├── team_liquid_crest.svg
+│   └── valorant-vct.svg
+├── .gitignore                   # Konfigurasi proteksi master file produk privat
+└── README.md                    # Dokumentasi lengkap proyek & panduan setup
 ```
-
----
-
-## 🌐 Panduan Hosting Gratis di GitHub Pages (`github.io`)
-
-Karena proyek ini menggunakan HTML & CSS statis tanpa server backend yang rumit, Anda dapat langsung meng-onlinekan katalog ini di GitHub Pages secara gratis:
-
-### Langkah 1: Buat Repository di GitHub
-1. Masuk ke akun [GitHub](https://github.com) Anda.
-2. Buat repository baru, misalnya bernama `custom-alert` atau `stream-alert`.
-3. Biarkan berstatus **Public** agar GitHub Pages bisa aktif gratis.
-
-### Langkah 2: Hubungkan & Push Repository Lokal
-Jalankan perintah berikut di terminal:
-```bash
-git remote add origin https://github.com/<username-anda>/<nama-repo>.git
-git push -u origin feat/custom-alert-themes
-```
-*(Setelah pengujian selesai, branch dapat di-merge ke `main` dan di-push ke branch `main`).*
-
-### Langkah 3: Aktifkan GitHub Pages
-1. Di halaman repository GitHub Anda, klik tab **Settings**.
-2. Pada menu samping kiri, klik **Pages**.
-3. Pada bagian **Build and deployment > Source**, pilih **Deploy from a branch**.
-4. Di bagian **Branch**, pilih branch yang aktif (misal `main` atau `feat/custom-alert-themes`) dan folder `/ (root)`.
-5. Klik **Save**.
-6. Tunggu sekitar 1-2 menit. Website katalog Anda akan online di tautan:
-   ```
-   https://<username-anda>.github.io/<nama-repo>/
-   ```
 
 ---
 
 ## 🚀 Panduan Pemasangan ke SociaBuzz
 
-1. Masuk ke dashboard [SociaBuzz](https://sociabuzz.com).
+1. Masuk ke dashboard akun [SociaBuzz](https://sociabuzz.com).
 2. Buka menu **Overlay / Alert Donasi**.
 3. Pada opsi **Kustomisasi Tampilan (Custom Alert)**:
-   - Buka file `sociabuzz-html.html` tema pilihan Anda, salin seluruh kodenya ke kolom **HTML**.
-   - Buka file `sociabuzz-css.css` tema pilihan Anda, salin seluruh kodenya ke kolom **CSS**.
+   - Salin seluruh isi berkas `sociabuzz-html.html` tema Anda ke kolom **HTML**.
+   - Salin seluruh isi berkas `sociabuzz-css.css` tema Anda ke kolom **CSS**.
 4. Klik tombol **Simpan / Update**.
-5. Salin link Browser Source yang diberikan SociaBuzz.
+5. Salin link **Browser Source URL** yang disediakan oleh SociaBuzz.
 
 ---
 
 ## 📺 Panduan Pengaturan di OBS Studio
 
-1. Buka OBS Studio.
-2. Pada panel **Sources**, klik ikon `+` dan pilih **Browser**.
-3. Beri nama alert, lalu tempelkan link dari SociaBuzz ke kolom **URL**.
-4. Atur dimensi:
-   - **Width**: `650`
-   - **Height**: `220`
+1. Buka aplikasi **OBS Studio**.
+2. Pada panel **Sources**, klik ikon **`+`** lalu pilih **Browser**.
+3. Beri nama sumber (misalnya `Alert Donasi SociaBuzz`), lalu klik **OK**.
+4. Di jendela pengaturan Browser Source:
+   - Tempelkan URL Browser Source dari SociaBuzz ke kolom **URL**.
+   - Atur **Width**: `650`
+   - Atur **Height**: `250`
 5. Centang opsi:
    - ✅ *Shutdown source when not visible*
    - ✅ *Refresh browser when scene becomes active*
-6. Klik **OK** dan letakkan alert di kanvas streaming Anda.
+6. Klik **OK** dan sesuaikan posisi alert pada kanvas preview streaming Anda.
+
+---
+
+## 📱 Panduan Pengaturan di TikTok Live Studio
+
+1. Buka aplikasi **TikTok Live Studio**.
+2. Pada bagian panel scene, klik **Add Source** (Tambah Sumber).
+3. Pilih opsi **Link / Browser**.
+4. Masukkan link Browser Source URL dari SociaBuzz.
+5. Atur dimensi resolusi:
+   - **Lebar (Width)**: `650`
+   - **Tinggi (Height)**: `250`
+6. Atur transparansi latar belakang (default sudah transparan).
+7. Klik **Apply / Selesai**, lalu posisikan overlay alert di area layar yang diinginkan.
 
 ---
 
 ## 📞 Informasi Kontak & Pemesanan Custom Alert
 
-Jika Anda ingin membeli paket tema atau ingin memesan alert eksklusif khusus streamer Anda (request logo, warna, dan animasi khusus):
+Untuk pembelian paket tema di atas atau pemesanan kustomisasi eksklusif (logo kustom, maskot streamer, palet warna khusus, dan sound effect unik):
 
 - **📱 WhatsApp**: [081220105682](https://wa.me/6281220105682?text=Halo,%20saya%20tertarik%20dengan%20Custom%20Alert%20SociaBuzz)
-- **👾 Discord ID**: `415282600404582420` ([Buka Profil Discord](https://discord.com/users/415282600404582420))
+- **👾 Discord**: [Hubungi via Discord](https://discord.com/users/415282600404582420)
 
