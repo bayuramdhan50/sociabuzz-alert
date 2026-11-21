@@ -28,11 +28,11 @@ Widget ini dirancang dengan alur konversi penjualan (*sales funnel* live):
    - Headline: *"Mau custom alert seperti ini? Bisa hubungin di DM TikTok saja!"*
    - CTA: `👉 Hubungi di DM TikTok`
 2. **Contoh 1 (Pink Sakura Kawaii):**
-   - Animasi donasi aktif: Rp50.000 dari Anya_Chan
+   - Animasi donasi aktif: xxx dari Anya_Chan
    - Pesan: *"Mau custom alert seperti ini? Bisa hubungin di DM TikTok saja! ✨"*
    - Label penjelas: `Contoh: Sakura Kawaii`
 3. **Contoh 2 (Cyberpunk Neon):**
-   - Animasi HUD laser: Rp100.000 dari CyberSamurai_99
+   - Animasi HUD laser: xxx dari CyberSamurai_99
    - Pesan: *"Tersedia 22+ tema keren! Bisa hubungin di DM TikTok saja untuk pemesanan!"*
    - Label penjelas: `Contoh: Cyberpunk Neon`
 

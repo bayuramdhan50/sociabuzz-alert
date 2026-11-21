@@ -613,7 +613,7 @@
         <div class="sakura-petal sp-2">✨</div>
         <div class="sakura-card">
           <div class="sakura-header">
-            <span class="sakura-amount" id="pinkAmount">Rp50.000</span>
+            <span class="sakura-amount" id="pinkAmount">xxx</span>
             <span class="sakura-from">dari</span>
             <span class="sakura-supporter" id="pinkDonor">Anya_Chan</span>
           </div>
@@ -632,7 +632,7 @@
         <div class="cyber-sample-flag">Contoh: Cyberpunk Neon</div>
         <div class="cyber-card">
           <div class="cyber-header">
-            <span class="cyber-amount" id="cyberAmount">Rp100.000</span>
+            <span class="cyber-amount" id="cyberAmount">xxx</span>
             <span class="cyber-from">dari</span>
             <span class="cyber-supporter" id="cyberDonor">CyberSamurai_99</span>
           </div>
@@ -730,6 +730,8 @@
       const promoMainText = document.getElementById('promoMainText');
       const promoCtaText = document.getElementById('promoCtaText');
 
+      const pinkAmount = document.getElementById('pinkAmount');
+      const cyberAmount = document.getElementById('cyberAmount');
       const pinkMsg = document.getElementById('pinkMsg');
       const cyberMsg = document.getElementById('cyberMsg');
 
@@ -757,6 +759,7 @@
       }
 
       // Ambil nilai kustom jika disediakan di URL
+      let amountVal = params.get('amount') || "xxx";
       let promoTextVal = params.get('promo') || "Mau <span class='highlight'>custom alert</span> seperti ini? Bisa hubungin di DM TikTok saja!";
       let ctaVal = params.get('cta') || "👉 Hubungi di DM TikTok";
       let badgeVal = params.get('badge') || "✨ CUSTOM ALERT PROMO";
@@ -785,6 +788,8 @@
       let isLoopRunning = true;
 
       function renderTexts() {
+        if (pinkAmount) pinkAmount.textContent = amountVal;
+        if (cyberAmount) cyberAmount.textContent = amountVal;
         promoBadgeText.textContent = badgeVal;
         promoMainText.innerHTML = promoTextVal;
         promoCtaText.textContent = ctaVal;
