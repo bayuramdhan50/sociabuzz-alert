@@ -3,7 +3,7 @@
 Overlay pintar 60 FPS khusus untuk **mempromosikan dan menjual Custom Alert** saat Anda sedang *live streaming* di **TikTok Live Studio** atau **OBS Studio**.
 
 Widget ini dirancang dengan alur konversi penjualan (*sales funnel* live):
-1. **Fase 1: Teks Promosi (Hook CTA)** muncul terlebih dahulu (misal: *"Mau custom alert seperti ini di live-mu? Bisa hubungin di DM sekarang!"*).
+1. **Fase 1: Teks Promosi (Hook CTA)** muncul terlebih dahulu (misal: *"Mau custom alert seperti ini? Bisa hubungin di DM TikTok saja!"*).
 2. **Fase 2: Transisi ke Contoh Nyata** (Animasi mulus beralih ke simulasi alert aktif tema **Pink Sakura Kawaii**).
 3. **Fase 3: Contoh Tambahan** (Beralih ke tema **Cyberpunk Mecha HUD**).
 4. **Siklus Otomatis (Looping)**: Berputar secara berkala tanpa membebani performa streaming game berat.
@@ -25,15 +25,15 @@ Widget ini dirancang dengan alur konversi penjualan (*sales funnel* live):
 
 1. **Kartu Promosi:**
    - Badge: `✨ CUSTOM ALERT PROMO`
-   - Headline: *"Mau custom alert keren seperti ini di live-mu? Bisa hubungin di DM sekarang!"*
-   - CTA: `👉 Hubungi via DM / Link Bio`
+   - Headline: *"Mau custom alert seperti ini? Bisa hubungin di DM TikTok saja!"*
+   - CTA: `👉 Hubungi di DM TikTok`
 2. **Contoh 1 (Pink Sakura Kawaii):**
    - Animasi donasi aktif: Rp50.000 dari Anya_Chan
-   - Pesan: *"Mau custom alert seperti ini? Yuk DM sekarang untuk buat alert impianmu! ✨"*
+   - Pesan: *"Mau custom alert seperti ini? Bisa hubungin di DM TikTok saja! ✨"*
    - Label penjelas: `Contoh: Sakura Kawaii`
 3. **Contoh 2 (Cyberpunk Neon):**
    - Animasi HUD laser: Rp100.000 dari CyberSamurai_99
-   - Pesan: *"Tersedia 22+ tema keren! Animasi 60 FPS ringan & siap pasang. DM untuk info order!"*
+   - Pesan: *"Tersedia 22+ tema keren! Bisa hubungin di DM TikTok saja untuk pemesanan!"*
    - Label penjelas: `Contoh: Cyberpunk Neon`
 
 ---

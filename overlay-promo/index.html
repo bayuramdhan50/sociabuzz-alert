@@ -594,10 +594,10 @@
         <div class="promo-badge-top" id="promoBadgeText">✨ CUSTOM ALERT PROMO</div>
         <div class="promo-card-main">
           <div class="promo-main-text" id="promoMainText">
-            Mau <span class="highlight">custom alert</span> keren seperti ini di live-mu? Bisa hubungin di DM sekarang!
+            Mau <span class="highlight">custom alert</span> seperti ini? Bisa hubungin di DM TikTok saja!
           </div>
           <div class="promo-footer-row">
-            <span class="promo-cta-action" id="promoCtaText">👉 DM TikTok / Instagram</span>
+            <span class="promo-cta-action" id="promoCtaText">👉 Hubungi di DM TikTok</span>
             <span class="promo-tag-sub">Kompatibel SociaBuzz, OBS &amp; TikTok Studio</span>
           </div>
         </div>
@@ -619,7 +619,7 @@
           </div>
           <div class="sakura-message">
             <span class="msg-icon">💌</span>
-            <span class="msg-text" id="pinkMsg">Mau custom alert seperti ini? Yuk DM sekarang untuk buat alert impianmu! ✨</span>
+            <span class="msg-text" id="pinkMsg">Mau custom alert seperti ini? Bisa hubungin di DM TikTok saja! ✨</span>
           </div>
         </div>
       </div>
@@ -638,7 +638,7 @@
           </div>
           <div class="cyber-message">
             <span class="msg-icon">&gt;</span>
-            <span class="msg-text" id="cyberMsg">Tersedia 22+ tema keren! Animasi 60 FPS ringan &amp; siap pasang. DM untuk info order!</span>
+            <span class="msg-text" id="cyberMsg">Tersedia 22+ tema keren! Bisa hubungin di DM TikTok saja untuk pemesanan!</span>
           </div>
         </div>
       </div>
@@ -655,13 +655,13 @@
 
     <div class="control-group">
       <label class="control-label" for="inputPromoText">Teks Promosi (Sebelum Muncul Contoh)</label>
-      <textarea id="inputPromoText" class="control-textarea" rows="2">Mau custom alert keren seperti ini di live-mu? Bisa hubungin di DM sekarang!</textarea>
+      <textarea id="inputPromoText" class="control-textarea" rows="2">Mau custom alert seperti ini? Bisa hubungin di DM TikTok saja!</textarea>
     </div>
 
     <div class="control-row">
       <div class="control-group">
         <label class="control-label" for="inputCta">Ajakan Kontak (CTA)</label>
-        <input type="text" id="inputCta" class="control-input" value="👉 Hubungi via DM / Link Bio">
+        <input type="text" id="inputCta" class="control-input" value="👉 Hubungi di DM TikTok">
       </div>
       <div class="control-group">
         <label class="control-label" for="inputPromoBadge">Teks Badge Promosi</label>
@@ -672,11 +672,11 @@
     <div class="control-row">
       <div class="control-group">
         <label class="control-label" for="inputPinkMsg">Pesan di Contoh Pink</label>
-        <input type="text" id="inputPinkMsg" class="control-input" value="Mau custom alert seperti ini? Yuk DM sekarang untuk buat alert impianmu! ✨">
+        <input type="text" id="inputPinkMsg" class="control-input" value="Mau custom alert seperti ini? Bisa hubungin di DM TikTok saja! ✨">
       </div>
       <div class="control-group">
         <label class="control-label" for="inputCyberMsg">Pesan di Contoh Cyberpunk</label>
-        <input type="text" id="inputCyberMsg" class="control-input" value="Tersedia 22+ tema keren! Animasi 60 FPS ringan & siap pasang. DM untuk info order!">
+        <input type="text" id="inputCyberMsg" class="control-input" value="Tersedia 22+ tema keren! Bisa hubungin di DM TikTok saja untuk pemesanan!">
       </div>
     </div>
 
@@ -757,11 +757,11 @@
       }
 
       // Ambil nilai kustom jika disediakan di URL
-      let promoTextVal = params.get('promo') || "Mau <span class='highlight'>custom alert</span> keren seperti ini di live-mu? Bisa hubungin di DM sekarang!";
-      let ctaVal = params.get('cta') || "👉 DM TikTok / Instagram";
+      let promoTextVal = params.get('promo') || "Mau <span class='highlight'>custom alert</span> seperti ini? Bisa hubungin di DM TikTok saja!";
+      let ctaVal = params.get('cta') || "👉 Hubungi di DM TikTok";
       let badgeVal = params.get('badge') || "✨ CUSTOM ALERT PROMO";
-      let pinkMsgVal = params.get('pinkMsg') || "Mau custom alert seperti ini? Yuk DM sekarang untuk buat alert impianmu! ✨";
-      let cyberMsgVal = params.get('cyberMsg') || "Tersedia 22+ tema keren! Animasi 60 FPS ringan & siap pasang. DM untuk info order!";
+      let pinkMsgVal = params.get('pinkMsg') || "Mau custom alert seperti ini? Bisa hubungin di DM TikTok saja! ✨";
+      let cyberMsgVal = params.get('cyberMsg') || "Tersedia 22+ tema keren! Bisa hubungin di DM TikTok saja untuk pemesanan!";
       let stepDuration = parseInt(params.get('dur'), 10) || 6;
       let sequenceMode = params.get('seq') || 'promo-pink-cyber';
 
