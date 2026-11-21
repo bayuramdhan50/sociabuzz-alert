@@ -1,60 +1,77 @@
-# 📢 Overlay Promosi & Custom Alert (OBS & TikTok Live Studio)
+# 📢 Live Promo Showcase Overlay — OBS & TikTok Live Studio
 
-Widget overlay promosi mandiri dan custom alert 60 FPS untuk **TikTok Live Studio**, **OBS Studio**, dan **SociaBuzz**. Berbasis HTML5, CSS3 hardware-accelerated, dan JavaScript murni tanpa dependensi berat.
+Overlay pintar 60 FPS khusus untuk **mempromosikan dan menjual Custom Alert** saat Anda sedang *live streaming* di **TikTok Live Studio** atau **OBS Studio**.
 
----
-
-## 🎨 Tema yang Disediakan
-
-1. **Pink Alert (Sakura Pastel Kawaii)**:
-   - Warna: Blush Pearl (`#FFF5F7`), Blossom Pink (`#FF6B8B`), Sweet Strawberry (`#FF3366`), Soft Lilac (`#9D72FF`).
-   - Fitur visual: Sudut melengkung 26px, ornamen kelopak bunga melayang, badge miring mengambang, font ramah (`Quicksand` & `Itim`).
-2. **Cyberpunk Alert (Mecha HUD Futuristic)**:
-   - Warna: Carbon Slate Dark (`#0A0E17`), Cyber Yellow (`#FCEE0A`), Cyan Laser (`#00F0FF`), Neon Crimson (`#FF003C`).
-   - Fitur visual: Sudut chamfered polygon cut, garis laser scanline sweep, bracket HUD, font sci-fi tajam (`Orbitron` & `Share Tech Mono`).
+Widget ini dirancang dengan alur konversi penjualan (*sales funnel* live):
+1. **Fase 1: Teks Promosi (Hook CTA)** muncul terlebih dahulu (misal: *"Mau custom alert seperti ini di live-mu? Bisa hubungin di DM sekarang!"*).
+2. **Fase 2: Transisi ke Contoh Nyata** (Animasi mulus beralih ke simulasi alert aktif tema **Pink Sakura Kawaii**).
+3. **Fase 3: Contoh Tambahan** (Beralih ke tema **Cyberpunk Mecha HUD**).
+4. **Siklus Otomatis (Looping)**: Berputar secara berkala tanpa membebani performa streaming game berat.
 
 ---
 
-## 🚀 Cara Menjalankan
+## 📁 Lokasi Berkas
 
-### 1. Uji Coba Langsung di Browser
-Buka file `overlay-promo/index.html` langsung di browser Anda. Terdapat kontrol simulator untuk mengubah teks, tema, mencoba animasi, dan mengaktifkan mode rotasi otomatis.
+- **File Utama:** [`overlay-promo/index.html`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/overlay-promo/index.html)
+- **Panduan:** [`overlay-promo/README.md`](file:///f:/Bayu/Koding/03-personal/sociabuzz-alert/overlay-promo/README.md)
 
-### 2. Pemasangan di OBS Studio
-1. Buka OBS Studio.
-2. Pada panel **Sources**, klik ikon **`+`** lalu pilih **Browser**.
-3. Centang **Local file**, lalu pilih file `overlay-promo/index.html`.
-4. Jika ingin menggunakan URL dinamis / server lokal:
-   - Masukkan link: `http://localhost:3000/overlay-promo/index.html?overlay=1&theme=pink`
-5. Atur **Width**: `640`, **Height**: `240`.
-6. Centang opsi:
+---
+
+## 🎨 Alur Kerja Tampilan Layar (Sequence)
+
+```
+[ Teks Promosi Penjualan ] ──(Transisi Mulus)──> [ Contoh Alert Pink (Sakura Kawaii) ] ──(Transisi)──> [ Contoh Alert 2 (Cyberpunk Neon) ] ──(Kembali ke Awal)
+```
+
+1. **Kartu Promosi:**
+   - Badge: `✨ CUSTOM ALERT PROMO`
+   - Headline: *"Mau custom alert keren seperti ini di live-mu? Bisa hubungin di DM sekarang!"*
+   - CTA: `👉 Hubungi via DM / Link Bio`
+2. **Contoh 1 (Pink Sakura Kawaii):**
+   - Animasi donasi aktif: Rp50.000 dari Anya_Chan
+   - Pesan: *"Mau custom alert seperti ini? Yuk DM sekarang untuk buat alert impianmu! ✨"*
+   - Label penjelas: `Contoh: Sakura Kawaii`
+3. **Contoh 2 (Cyberpunk Neon):**
+   - Animasi HUD laser: Rp100.000 dari CyberSamurai_99
+   - Pesan: *"Tersedia 22+ tema keren! Animasi 60 FPS ringan & siap pasang. DM untuk info order!"*
+   - Label penjelas: `Contoh: Cyberpunk Neon`
+
+---
+
+## ⚙️ Kustomisasi Teks & Pengaturan
+
+### A. Lewat Form Simulator di Browser
+Buka file `overlay-promo/index.html` langsung di browser Anda. Di bagian bawah terdapat panel kontrol untuk:
+- Mengubah teks promosi (misal: ganti akun DM atau link bio).
+- Memilih urutan (hanya pink atau kombinasi dengan cyberpunk).
+- Mengatur durasi waktu tampil (misal tiap 6 detik berganti).
+- Menekan tombol **Salin URL OBS** untuk langsung mendapatkan tautan siap pakai.
+
+### B. Lewat Parameter URL di OBS / TikTok Live Studio
+Anda dapat langsung mengatur teks pada kolom URL Browser Source:
+
+| Parameter | Fungsi | Contoh Nilai |
+|---|---|---|
+| `overlay=1` | Mengaktifkan mode transparan khusus streaming | `1` |
+| `promo` | Mengubah teks promosi utama | `Mau+custom+alert+seperti+ini...+Bisa+hubungin+di+DM` |
+| `cta` | Mengubah tombol ajakan kontak | `👉+DM+Instagram+%40namaakun` |
+| `dur` | Durasi tiap tampilan (dalam detik) | `6` |
+| `seq` | Pilihan urutan tampilan | `promo-pink-cyber` atau `promo-pink-only` |
+
+---
+
+## 🚀 Panduan Pemasangan
+
+### Di OBS Studio
+1. Pada menu **Sources**, klik **`+`** lalu pilih **Browser**.
+2. Centang **Local file**, klik **Browse**, dan pilih file `overlay-promo/index.html`.
+3. Atur **Width**: `650` dan **Height**: `250`.
+4. Centang:
    - ✅ *Shutdown source when not visible*
    - ✅ *Refresh browser when scene becomes active*
+5. Klik **OK**.
 
-### 3. Pemasangan di TikTok Live Studio
-1. Buka **TikTok Live Studio**.
-2. Klik **Add Source** -> Pilih **Web / Browser Source** atau **Custom Link**.
-3. Tempelkan URL overlay atau arahkan ke berkas `index.html`.
-4. Sesuaikan posisi kartu di atas canvas portrait streaming Anda.
-
----
-
-## ⚙️ Parameter URL Kustomisasi
-
-Anda dapat mengatur tampilan langsung melalui parameter URL tanpa mengubah kode:
-
-| Parameter | Pilihan Nilai | Fungsi |
-|---|---|---|
-| `overlay` | `1` | Menyembunyikan panel kontrol dan mengaktifkan mode transparan OBS |
-| `theme` | `pink` / `cyberpunk` | Memilih tema desain |
-| `badge` | Teks bebas | Mengubah teks badge sudut atas |
-| `title` | Teks bebas | Mengubah judul utama / nominal donasi |
-| `sub` | Teks bebas | Mengubah teks sub-judul / pengirim |
-| `msg` | Teks bebas | Mengubah isi pesan promosi |
-| `rotate` | `1` / `true` | Mengaktifkan pergantian teks otomatis secara berkala |
-| `interval` | Angka detik (cth: `8`) | Waktu jeda rotasi teks promosi (default: 8 detik) |
-
-**Contoh URL Kustomisasi:**
-```text
-overlay-promo/index.html?overlay=1&theme=pink&badge=PROMO&title=Sawer+Yuk&sub=Mulai+10rb&msg=Pesanmu+langsung+muncul+di+layar+stream!
-```
+### Di TikTok Live Studio
+1. Klik **Add Source** -> Pilih **Web / Browser Source**.
+2. Masukkan path file lokal atau URL lokal (contoh: `http://localhost:3000/overlay-promo/index.html?overlay=1`).
+3. Sesuaikan ukuran dan letakkan di sudut bawah atau atas canvas streaming TikTok.
