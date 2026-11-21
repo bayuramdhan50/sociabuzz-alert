@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overlay Promosi & Custom Alert — OBS & TikTok Live Studio</title>
+  
+  <!-- Google Fonts Preconnect & Load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Orbitron:wght@700;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Quicksand:wght@600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================
+       1. GLOBAL RESET & BASE STYLING
+       ========================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Studio Preview Mode (Aktif hanya jika bukan ?overlay=1) */
+    body.preview-mode {
+      background: radial-gradient(circle at 50% 15%, #1e1b2e 0%, #0c0a14 100%);
+      color: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+      overflow-y: auto;
+    }
+
+    .preview-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .preview-header h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .preview-header p {
+      font-size: 14px;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+
+    /* Container Overlay untuk Browser Source */
+    .overlay-viewport {
+      width: 100%;
+      max-width: 640px;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    body.preview-mode .overlay-viewport {
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    /* ==========================================================
+       2. TEMA 1: PINK ALERT (SAKURA PASTEL KAWAII)
+       ========================================================== */
+    .theme-pink .promo-card-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 580px;
+      font-family: 'Quicksand', sans-serif;
+      animation: pinkBounceIn 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .theme-pink .promo-badge {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #FF6B8B 0%, #FF8E9E 100%);
+      color: #FFFFFF;
+      padding: 5px 14px 5px 10px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(255, 107, 139, 0.45);
+      border: 2px solid #FFFFFF;
+      transform: rotate(-3deg);
+      font-family: 'Itim', cursive, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .theme-pink .promo-card {
+      background: #FFF5F7;
+      border: 3px solid #FF8E9E;
+      border-radius: 26px;
+      box-shadow: 
+        0 14px 35px rgba(255, 107, 139, 0.28),
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+      padding: 22px 26px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .theme-pink .promo-petals {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .theme-pink .petal {
+      position: absolute;
+      font-size: 18px;
+      opacity: 0.75;
+      animation: floatPetal 4s ease-in-out infinite alternate;
+    }
+    .theme-pink .p1 { top: 12px; right: 28px; animation-delay: 0s; }
+    .theme-pink .p2 { bottom: 10px; right: 14px; animation-delay: 1.5s; }
+
+    .theme-pink .promo-header-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-top: 6px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .theme-pink .promo-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #FF3366;
+      text-shadow: 0 2px 8px rgba(255, 51, 102, 0.25);
+    }
+
+    .theme-pink .promo-subtitle {
+      font-size: 17px;
+      font-weight: 700;
+      color: #9D72FF;
+    }
+
+    .theme-pink .promo-body {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1.5px dashed rgba(255, 107, 139, 0.4);
+      border-radius: 16px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .theme-pink .promo-body-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .theme-pink .promo-body-text {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: #4A2834;
+    }
+
+    @keyframes pinkBounceIn {
+      0% { opacity: 0; transform: translateY(-30px) scale(0.92); }
+      60% { opacity: 1; transform: translateY(6px) scale(1.02); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes floatPetal {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-8px) rotate(25deg); }
+    }
+
+    /* ==========================================================
+       3. TEMA 2: CYBERPUNK ALERT (MECHA HUD FUTURISTIC)
+       ========================================================== */
+    .theme-cyberpunk .promo-card-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 580px;
+      font-family: 'Share Tech Mono', monospace;
+      animation: cyberGlitchIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .theme-cyberpunk .promo-badge {
+      position: absolute;
+      top: -12px;
+      left: 16px;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #00F0FF;
+      color: #0A0E17;
+      padding: 4px 12px;
+      clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      box-shadow: 0 0 16px rgba(0, 240, 255, 0.6);
+    }
+
+    .theme-cyberpunk .promo-card {
+      background: #0A0E17;
+      border: 2px solid #00F0FF;
+      clip-path: polygon(
+        0 14px, 14px 0, 
+        calc(100% - 14px) 0, 100% 14px, 
+        100% calc(100% - 14px), calc(100% - 14px) 100%, 
+        14px 100%, 0 calc(100% - 14px)
+      );
+      box-shadow: 
+        0 0 25px rgba(0, 240, 255, 0.35),
+        0 0 0 1px #FCEE0A inset;
+      padding: 22px 24px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Scanline effect */
+    .theme-cyberpunk .promo-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.2), transparent);
+      animation: cyberScan 3s linear infinite;
+      pointer-events: none;
+    }
+
+    .theme-cyberpunk .promo-header-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-top: 6px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .theme-cyberpunk .promo-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 24px;
+      font-weight: 900;
+      color: #FCEE0A;
+      letter-spacing: 0.5px;
+      text-shadow: 0 0 12px rgba(252, 238, 10, 0.5);
+    }
+
+    .theme-cyberpunk .promo-subtitle {
+      font-size: 16px;
+      font-weight: 700;
+      color: #00F0FF;
+      letter-spacing: 1px;
+    }
+
+    .theme-cyberpunk .promo-body {
+      background: rgba(0, 240, 255, 0.06);
+      border-left: 3px solid #FF003C;
+      border-right: 1px solid rgba(0, 240, 255, 0.2);
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .theme-cyberpunk .promo-body-icon {
+      color: #FF003C;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .theme-cyberpunk .promo-body-text {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #E6F1FF;
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes cyberGlitchIn {
+      0% { opacity: 0; transform: scaleX(0.7) translateY(-20px); filter: brightness(2); }
+      70% { opacity: 1; transform: scaleX(1.05) translateY(2px); }
+      100% { opacity: 1; transform: scaleX(1) translateY(0); filter: brightness(1); }
+    }
+
+    @keyframes cyberScan {
+      0% { left: -100%; }
+      50%, 100% { left: 100%; }
+    }
+
+    /* Out animation saat transisi rotasi */
+    .fade-out {
+      animation: alertExit 0.4s ease-in forwards !important;
+    }
+
+    @keyframes alertExit {
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(0.9) translateY(15px); }
+    }
+
+    /* ==========================================================
+       4. FORM KONTROL PREVIEW (UNTUK PENGGUNA MENGUJI COBA)
+       ========================================================== */
+    .control-panel {
+      width: 100%;
+      max-width: 640px;
+      background: #181524;
+      border: 1px solid #2d2845;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .control-group {
+      margin-bottom: 14px;
+    }
+
+    .control-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .control-input, .control-select, .control-textarea {
+      width: 100%;
+      background: #0d0b14;
+      border: 1px solid #3b3558;
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: #ffffff;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .control-input:focus, .control-select:focus, .control-textarea:focus {
+      border-color: #a855f7;
+    }
+
+    .control-textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: transform 0.15s, opacity 0.2s;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background: #262138;
+      color: #e2e8f0;
+      border: 1px solid #3f375f;
+    }
+
+    .copy-url-box {
+      margin-top: 16px;
+      padding: 12px;
+      background: #0a0812;
+      border: 1px solid #29243f;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 12px;
+      color: #38bdf8;
+      word-break: break-all;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body class="preview-mode">
+
+  <!-- Header Hanya Tampil di Browser Test -->
+  <header class="preview-header" id="previewHeader">
+    <h1><span>⚡</span> Custom Promo &amp; Alert Overlay</h1>
+    <p>Overlay Teks Promosi Interaktif untuk OBS Studio &amp; TikTok Live Studio</p>
+  </header>
+
+  <!-- Viewport Overlay Utama (Yang dirender oleh OBS / TikTok Studio) -->
+  <main class="overlay-viewport theme-pink" id="overlayViewport">
+    <div class="promo-card-wrapper" id="promoCardWrapper">
+      
+      <!-- Badge Melayang -->
+      <div class="promo-badge" id="alertBadge">
+        <span class="badge-icon" id="badgeIcon">🌸</span>
+        <span class="badge-text" id="badgeText">YUK DUKUNG!</span>
+      </div>
+
+      <!-- Ornamen Petals (Hanya Pink) -->
+      <div class="promo-petals" id="promoPetals">
+        <span class="petal p1">🌸</span>
+        <span class="petal p2">✨</span>
+      </div>
+
+      <!-- Kartu Alert Promosi -->
+      <div class="promo-card">
+        <div class="promo-header-row">
+          <div class="promo-title" id="alertTitle">Rp10.000+</div>
+          <div class="promo-subtitle" id="alertSubtitle">Kirim Pesan di Layar</div>
+        </div>
+
+        <div class="promo-body">
+          <span class="promo-body-icon" id="bodyIcon">💌</span>
+          <span class="promo-body-text" id="bodyText">Dukung streamer via link SociaBuzz di bio! Pesanmu langsung muncul di layar live stream ✨</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Panel Konfigurasi Simulator (Sembunyi otomatis jika mode ?overlay=1) -->
+  <section class="control-panel" id="controlPanel">
+    <div class="control-group">
+      <label class="control-label" for="themeSelect">Pilih Tema Desain</label>
+      <select id="themeSelect" class="control-select">
+        <option value="pink" selected>🌸 Pink Alert (Sakura Pastel Kawaii)</option>
+        <option value="cyberpunk">⚡ Cyberpunk Alert (Mecha HUD Futuristic)</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="presetSelect">Pilih Preset Teks Promosi</label>
+      <select id="presetSelect" class="control-select">
+        <option value="p1">1. Ajakan Donasi / Sawer (SociaBuzz Standar)</option>
+        <option value="p2">2. Interaksi Request Lagu / Sound</option>
+        <option value="p3">3. Challenge Streamer / Fun Goal</option>
+        <option value="p4">4. Promosi Jasa Custom Alert / Bisnis</option>
+        <option value="custom">-- Custom Teks Sendiri --</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputBadge">Teks Badge (Pojok Atas)</label>
+      <input type="text" id="inputBadge" class="control-input" value="YUK DUKUNG!">
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputTitle">Judul Utama / Nominal</label>
+      <input type="text" id="inputTitle" class="control-input" value="Rp10.000+">
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputSubtitle">Subteks / Nama Pengirim</label>
+      <input type="text" id="inputSubtitle" class="control-input" value="Kirim Pesan di Layar">
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputText">Isi Pesan Promosi</label>
+      <textarea id="inputText" class="control-textarea">Dukung streamer via link SociaBuzz di bio! Pesanmu langsung muncul di layar live stream ✨</textarea>
+    </div>
+
+    <div class="btn-row">
+      <button type="button" class="btn btn-primary" id="btnTrigger">
+        🔄 Uji Coba Trigger Animasi
+      </button>
+      <button type="button" class="btn btn-secondary" id="btnToggleRotate">
+        ⏱️ Mode Rotasi Otomatis (OFF)
+      </button>
+    </div>
+
+    <div class="copy-url-box" id="copyUrlBox">
+      <span id="urlPreviewText">...</span>
+      <button type="button" class="btn btn-secondary" style="padding: 4px 10px; font-size: 11px;" id="btnCopyUrl">
+        Salin URL OBS
+      </button>
+    </div>
+  </section>
+
+  <!-- Script Logika Modular & Query Parameter Parser -->
+  <script>
+    (function () {
+      'use strict';
+
+      // 1. Elemen DOM
+      const body = document.body;
+      const previewHeader = document.getElementById('previewHeader');
+      const controlPanel = document.getElementById('controlPanel');
+      const overlayViewport = document.getElementById('overlayViewport');
+      const promoCardWrapper = document.getElementById('promoCardWrapper');
+      const promoPetals = document.getElementById('promoPetals');
+
+      const alertBadge = document.getElementById('alertBadge');
+      const badgeIcon = document.getElementById('badgeIcon');
+      const badgeText = document.getElementById('badgeText');
+      const alertTitle = document.getElementById('alertTitle');
+      const alertSubtitle = document.getElementById('alertSubtitle');
+      const bodyIcon = document.getElementById('bodyIcon');
+      const bodyText = document.getElementById('bodyText');
+
+      const themeSelect = document.getElementById('themeSelect');
+      const presetSelect = document.getElementById('presetSelect');
+      const inputBadge = document.getElementById('inputBadge');
+      const inputTitle = document.getElementById('inputTitle');
+      const inputSubtitle = document.getElementById('inputSubtitle');
+      const inputText = document.getElementById('inputText');
+      const btnTrigger = document.getElementById('btnTrigger');
+      const btnToggleRotate = document.getElementById('btnToggleRotate');
+      const urlPreviewText = document.getElementById('urlPreviewText');
+      const btnCopyUrl = document.getElementById('btnCopyUrl');
+
+      // 2. Daftar Preset Teks Promosi
+      const PRESETS = {
+        p1: {
+          badge: 'YUK DUKUNG!',
+          title: 'Rp10.000+',
+          subtitle: 'Kirim Pesan di Layar',
+          text: 'Dukung streamer via link SociaBuzz di bio! Pesanmu langsung muncul di layar live stream ✨',
+          iconPink: '🌸',
+          iconCyber: '⚡'
+        },
+        p2: {
+          badge: 'REQUEST ON',
+          title: 'Rp15.000+',
+          subtitle: 'Request Lagu Favorit',
+          text: 'Mau dengar lagu kesukaanmu? Sawer sekarang dan cantumkan judul lagu di pesan donasi 🎵',
+          iconPink: '🎶',
+          iconCyber: '🎧'
+        },
+        p3: {
+          badge: 'CHALLENGE',
+          title: 'Rp25.000+',
+          subtitle: 'Beri Tantangan Streamer',
+          text: 'Tantang streamer main hero sulit / main tanpa helm! Tulis tantanganmu di pesan dukungan 🔥',
+          iconPink: '🎯',
+          iconCyber: '🎮'
+        },
+        p4: {
+          badge: 'CUSTOM ALERT',
+          title: 'Mau Alert Keren?',
+          subtitle: 'Jasa Kustomisasi Overlay',
+          text: 'Buat live TikTok & OBS makin pro dengan animasi custom alert unik! Cek link bio / DM sekarang 🚀',
+          iconPink: '💖',
+          iconCyber: '💎'
+        }
+      };
+
+      // 3. Parse URL Parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const isPureOverlay = urlParams.get('overlay') === '1' || urlParams.get('obs') === '1';
+
+      if (isPureOverlay) {
+        body.classList.remove('preview-mode');
+        if (previewHeader) previewHeader.style.display = 'none';
+        if (controlPanel) controlPanel.style.display = 'none';
+      }
+
+      // Ambil nilai dari URL jika ada
+      let currentTheme = urlParams.get('theme') || 'pink';
+      let currentBadge = urlParams.get('badge') || (currentTheme === 'pink' ? 'YUK DUKUNG!' : 'PROMO LIVE');
+      let currentTitle = urlParams.get('title') || 'Rp10.000+';
+      let currentSubtitle = urlParams.get('sub') || 'Kirim Pesan di Layar';
+      let currentMsg = urlParams.get('msg') || 'Dukung streamer via SociaBuzz! Pesanmu langsung tayang di layar.';
+      let isRotateEnabled = urlParams.get('rotate') === '1' || urlParams.get('rotate') === 'true';
+      let rotateIntervalSec = parseInt(urlParams.get('interval'), 10) || 8;
+
+      // 4. Sinkronisasi UI
+      function applyTheme(theme) {
+        currentTheme = theme;
+        overlayViewport.className = 'overlay-viewport theme-' + theme;
+        if (promoPetals) {
+          promoPetals.style.display = theme === 'pink' ? 'block' : 'none';
+        }
+        badgeIcon.textContent = theme === 'pink' ? '🌸' : '⚡';
+        bodyIcon.textContent = theme === 'pink' ? '💌' : '>';
+        themeSelect.value = theme;
+        updateUrlPreview();
+      }
+
+      function renderContent() {
+        badgeText.textContent = currentBadge;
+        alertTitle.textContent = currentTitle;
+        alertSubtitle.textContent = currentSubtitle;
+        bodyText.textContent = currentMsg;
+
+        inputBadge.value = currentBadge;
+        inputTitle.value = currentTitle;
+        inputSubtitle.value = currentSubtitle;
+        inputText.value = currentMsg;
+        updateUrlPreview();
+      }
+
+      function triggerAnimation() {
+        promoCardWrapper.classList.remove('fade-out');
+        promoCardWrapper.style.animation = 'none';
+        // Trigger reflow
+        void promoCardWrapper.offsetWidth;
+        promoCardWrapper.style.animation = '';
+      }
+
+      function updateUrlPreview() {
+        const base = window.location.origin + window.location.pathname;
+        const p = new URLSearchParams();
+        p.set('overlay', '1');
+        p.set('theme', currentTheme);
+        p.set('badge', currentBadge);
+        p.set('title', currentTitle);
+        p.set('sub', currentSubtitle);
+        p.set('msg', currentMsg);
+        if (isRotateEnabled) {
+          p.set('rotate', '1');
+          p.set('interval', rotateIntervalSec);
+        }
+        const fullUrl = base + '?' + p.toString();
+        urlPreviewText.textContent = fullUrl;
+      }
+
+      // 5. Mode Auto-Rotate
+      let rotateTimer = null;
+      const presetKeys = Object.keys(PRESETS);
+      let presetIndex = 0;
+
+      function startRotation() {
+        if (rotateTimer) clearInterval(rotateTimer);
+        rotateTimer = setInterval(() => {
+          promoCardWrapper.classList.add('fade-out');
+          setTimeout(() => {
+            presetIndex = (presetIndex + 1) % presetKeys.length;
+            const p = PRESETS[presetKeys[presetIndex]];
+            currentBadge = p.badge;
+            currentTitle = p.title;
+            currentSubtitle = p.subtitle;
+            currentMsg = p.text;
+            renderContent();
+            promoCardWrapper.classList.remove('fade-out');
+            triggerAnimation();
+          }, 450);
+        }, rotateIntervalSec * 1000);
+      }
+
+      function stopRotation() {
+        if (rotateTimer) {
+          clearInterval(rotateTimer);
+          rotateTimer = null;
+        }
+      }
+
+      // Inisialisasi awal
+      applyTheme(currentTheme);
+      renderContent();
+
+      if (isRotateEnabled) {
+        startRotation();
+        btnToggleRotate.textContent = '⏱️ Mode Rotasi Otomatis (ON)';
+      }
+
+      // Event Listeners Form Kontrol
+      themeSelect.addEventListener('change', (e) => {
+        applyTheme(e.target.value);
+        triggerAnimation();
+      });
+
+      presetSelect.addEventListener('change', (e) => {
+        const key = e.target.value;
+        if (PRESETS[key]) {
+          const p = PRESETS[key];
+          currentBadge = p.badge;
+          currentTitle = p.title;
+          currentSubtitle = p.subtitle;
+          currentMsg = p.text;
+          renderContent();
+          triggerAnimation();
+        }
+      });
+
+      inputBadge.addEventListener('input', (e) => {
+        currentBadge = e.target.value;
+        badgeText.textContent = currentBadge;
+        updateUrlPreview();
+      });
+
+      inputTitle.addEventListener('input', (e) => {
+        currentTitle = e.target.value;
+        alertTitle.textContent = currentTitle;
+        updateUrlPreview();
+      });
+
+      inputSubtitle.addEventListener('input', (e) => {
+        currentSubtitle = e.target.value;
+        alertSubtitle.textContent = currentSubtitle;
+        updateUrlPreview();
+      });
+
+      inputText.addEventListener('input', (e) => {
+        currentMsg = e.target.value;
+        bodyText.textContent = currentMsg;
+        updateUrlPreview();
+      });
+
+      btnTrigger.addEventListener('click', triggerAnimation);
+
+      btnToggleRotate.addEventListener('click', () => {
+        isRotateEnabled = !isRotateEnabled;
+        if (isRotateEnabled) {
+          startRotation();
+          btnToggleRotate.textContent = '⏱️ Mode Rotasi Otomatis (ON)';
+        } else {
+          stopRotation();
+          btnToggleRotate.textContent = '⏱️ Mode Rotasi Otomatis (OFF)';
+        }
+        updateUrlPreview();
+      });
+
+      btnCopyUrl.addEventListener('click', () => {
+        navigator.clipboard.writeText(urlPreviewText.textContent).then(() => {
+          const prev = btnCopyUrl.textContent;
+          btnCopyUrl.textContent = 'Tersalin! ✅';
+          setTimeout(() => { btnCopyUrl.textContent = prev; }, 1800);
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>
